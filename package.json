@@ -1,0 +1,25 @@
+{
+  "name": "snapnature",
+  "version": "0.1.0",
+  "description": "Nature image recognition web app using deep learning",
+  "main": "main.py",
+  "scripts": {
+    "start": "uvicorn main:app --host 0.0.0.0 --port 8000",
+    "dev": "uvicorn main:app --reload --port 8000",
+    "test": "pytest tests/ -v"
+  },
+  "keywords": [
+    "nature",
+    "image-recognition",
+    "deep-learning",
+    "fastapi",
+    "pytorch",
+    "computer-vision"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": ""
+  }
+}

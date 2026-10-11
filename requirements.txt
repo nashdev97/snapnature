@@ -1,0 +1,5 @@
+fastapi
+uvicorn[standard]
+pillow
+torch>=2.0.0
+torchvision
