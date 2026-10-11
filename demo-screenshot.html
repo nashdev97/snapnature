@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapNature Demo Screenshot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .phone-mockup {
+            width: 375px;
+            height: 667px;
+            background: #fff;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+            position: relative;
+            border: 12px solid #1a1a1a;
+        }
+        .status-bar {
+            background: #2d5016;
+            height: 44px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            color: white;
+            font-size: 14px;
+        }
+        .app-header {
+            background: linear-gradient(135deg, #38b000 0%, #2d5016 100%);
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .app-header h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+        }
+        .app-header p {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+        .content {
+            padding: 20px;
+            background: #f8f9fa;
+            height: calc(100% - 44px);
+            overflow-y: auto;
+        }
+        .result-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .image-preview {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, #84fab0 0%, #8fd3f4 100%);
+            border-radius: 12px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            position: relative;
+            overflow: hidden;
+        }
+        .image-preview::before {
+            content: '🌸';
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.7;
+        }
+        .species-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #2d5016;
+            margin-bottom: 8px;
+        }
+        .confidence {
+            display: flex;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .confidence-bar {
+            flex: 1;
+            height: 8px;
+            background: #e0e0e0;
+            border-radius: 4px;
+            overflow: hidden;
+            margin: 0 12px;
+        }
+        .confidence-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #38b000, #2d5016);
+            width: 87%;
+            border-radius: 4px;
+        }
+        .confidence-text {
+            font-weight: bold;
+            color: #38b000;
+        }
+        .fun-facts {
+            background: #f0f7ed;
+            padding: 16px;
+            border-radius: 12px;
+            border-left: 4px solid #38b000;
+        }
+        .fun-facts h3 {
+            color: #2d5016;
+            font-size: 16px;
+            margin-bottom: 12px;
+        }
+        .fun-facts p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .btn-primary {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #38b000 0%, #2d5016 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 16px;
+        }
+        .badge {
+            display: inline-block;
+            background: #38b000;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        .footer-badge {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #667eea;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="phone-mockup">
+        <div class="status-bar">
+            <span>9:41</span>
+            <span>📶 📡 🔋</span>
+        </div>
+        <div class="app-header">
+            <h1>🌿 SnapNature</h1>
+            <p>Identify nature with open-source AI</p>
+        </div>
+        <div class="content">
+            <div class="result-card">
+                <div class="image-preview"></div>
+                <div class="species-name">Cherry Blossom</div>
+                <div class="confidence">
+                    <span style="font-size: 12px; color: #666;">Confidence</span>
+                    <div class="confidence-bar">
+                        <div class="confidence-fill"></div>
+                    </div>
+                    <span class="confidence-text">87%</span>
+                </div>
+                <div class="fun-facts">
+                    <h3>🌸 Fun Facts</h3>
+                    <p>🔍 You spotted a Cherry Blossom!</p>
+                    <p>🌼 Flowers follow the sun - this is called heliotropism!</p>
+                    <p>🌱 This observation helps build biodiversity data!</p>
+                </div>
+                <span class="badge">OPEN-SOURCE AI</span>
+                <button class="btn-primary">💾 Save to Journal</button>
+            </div>
+        </div>
+    </div>
+    <div class="footer-badge">Hacktoberfest 2026</div>
+</body>
+</html>
